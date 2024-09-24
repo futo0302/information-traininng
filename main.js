@@ -1,11 +1,9 @@
 const todoList = document.getElementById('todoList');
-window.addTodo = function(){
+function addTodo() {
     const todoInput = document.getElementById('todoInput');
     const todoText = todoInput.value.trim();
-    
-    
 
-    if (todoText !== ""){
+    if (todoText !== "") {
         addTodoToList(todoText);
         todoInput.value = '';
     } else {
@@ -13,10 +11,7 @@ window.addTodo = function(){
     }
 };
 function addTodoToList(todoText) {
-    
     const li = document.createElement('li');
-    console.log(li)
-    console.log(li.textContent);
     li.textContent = todoText;
     todoList.appendChild(li);
 }
